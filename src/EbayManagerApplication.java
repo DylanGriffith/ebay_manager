@@ -5,9 +5,11 @@ import org.eclipse.swt.widgets.Shell;
 public class EbayManagerApplication {
     private Shell m_shell;
     private Display m_display;
+    private HomePage m_homePage;
+    
     public EbayManagerApplication() {
         m_display = new Display();
-        m_shell = new Shell(m_display);
+       
     }
 
     public void stop() {
@@ -15,8 +17,7 @@ public class EbayManagerApplication {
     }
 
     public void start() {
-        EbayBulkItemUploaderWizard wizard = new EbayBulkItemUploaderWizard();
-        WizardDialog dialog = new WizardDialog(m_shell, wizard);
-        dialog.open();
+        m_homePage = new HomePage(m_display);
+        
     }
 }
