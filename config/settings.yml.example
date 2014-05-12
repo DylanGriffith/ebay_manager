@@ -1,0 +1,8 @@
+dev_id: "foo"
+app_id: "foo"
+cert_id: "foo"
+ru_name: "foo"
+login_url: "https://signin.sandbox.ebay.com/ws/eBayISAPI.dll?SignIn&runame=:runame&SessID=:session_id"
+test_user:
+  user_id: "TESTUSER_foo"
+  password: "foo"
