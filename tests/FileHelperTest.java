@@ -16,10 +16,11 @@ public class FileHelperTest {
     @Test
     public void testMakeFileFromPathAndNameWithNull() {
         String path = null;
+        String currentPath = System.getProperty("user.dir");
         String name = ".vimrc";
         File result = FileHelper.makeFileFromPathAndName(path, name);
-        assertEquals(result.getAbsolutePath(), "/home/dylan/Dropbox/dev/code/eclipse_workspaces/mint_vm/EbayManager/.vimrc");
-        assertEquals(result.getName(), ".vimrc");
+        assertEquals(currentPath + "/.vimrc", result.getAbsolutePath());
+        assertEquals(".vimrc", result.getName());
     }
 
     @Test
